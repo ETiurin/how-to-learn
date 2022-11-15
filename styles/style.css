@@ -1,12 +1,8 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   box-sizing: border-box;
 }
 
@@ -14,7 +10,6 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
   display: flex;
   position: relative;
   background-color: #f2f2f2;
@@ -85,40 +80,37 @@
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  padding-bottom: 100px;
-  min-width: 784px;
 }
 
 .two-columns {
   display: flex;
   justify-content: space-between;
   width: 80%;
-
 }
 
 .two-columns__brief {
-  display: flex;
-  justify-content: center;
-  color:#2f80ed;
+  color: #2f80ed;
   width: 175px;
   line-height: 1.2;
   font-size: 18px;
+  margin: 0;
   font-weight: normal;
 }
 
 .two-columns__main-text {
   width: 80%;
+  min-width: 784px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
 .two-columns__paragraph {
-  margin: 0 30px 0 0;
+  margin: 0 0 30px;
 }
 
-.two-columns__paragraph + .two-columns__paragraph {
-  padding-top: 30px;
+.two-columns__paragraph:last-child {
+  margin: 0;
 }
 
 .two-columns__span-accent {
@@ -128,42 +120,50 @@
 }
 
 .digits {
-  background-position: center;
+  padding: 100px 0;
 }
 
 .section-title {
+  text-align: center;
+  margin: 0 auto;
   width: 60%;
-  padding-top: 100px;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
 }
 
 .section-subtitle {
+  text-align: center;
+  margin: 20px auto 0;
   width: 60%;
-  padding-top: 20px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
 .table {
-  margin: 0;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(4, 250px);
+  justify-content: space-between;
+  grid-row-gap: 60px;
+  margin: 60px auto 0;
   list-style: none;
   width: 1100px;
-  padding: 0 auto 100px;
 }
 
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
+  margin: 0;
 }
 
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin: 20px 0 0;
 }
 
 .table__cell_theme_dark {
@@ -171,4 +171,15 @@
   color: white;
   right: 0;
   top: 80px;
+}
+
+.columns {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  flex-basis: 711px;
 }
