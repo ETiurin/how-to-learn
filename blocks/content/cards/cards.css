@@ -3,7 +3,6 @@
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(3, 240px);
   justify-content: center;
-  grid-row-gap: 60px;
   grid-column-gap: 100px;
   margin: 0 auto;
   list-style: none;
